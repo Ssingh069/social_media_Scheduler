@@ -15,7 +15,7 @@ reviews:
     drafts: false           # skip draft PRs
     base_branches:
       - main
-      - develpoment
+      - development
   path_filters:
     - "!client/dist/**"
     - "!client/node_modules/**"
