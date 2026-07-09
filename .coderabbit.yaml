@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://storage.googleapis.com/coderabbit_public_assets/schema.v2.json
+# CodeRabbit configuration — https://docs.coderabbit.ai/reference/yaml-template
+language: en-US
+early_access: false
+
+reviews:
+  profile: chill            # "chill" = fewer, higher-signal comments; "assertive" = more thorough
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false           # skip draft PRs
+    base_branches:
+      - main
+      - develpoment
+  path_filters:
+    - "!client/dist/**"
+    - "!client/node_modules/**"
+    - "!**/package-lock.json"
+  path_instructions:
+    - path: "client/src/**/*.{ts,tsx}"
+      instructions: >
+        Review React + TypeScript code. Flag missing null/undefined checks,
+        unhandled promise rejections, missing dependency arrays in hooks,
+        and accessibility issues in JSX. Prefer functional components.
+  tools:
+    eslint:
+      enabled: true          # uses the repo's eslint.config.js
+
+chat:
+  auto_reply: true
