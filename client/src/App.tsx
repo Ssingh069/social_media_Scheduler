@@ -1,10 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Dashboard from "./pages/dashboard";
+import Dashboard from "./pages/Dashboard";
 import AIComposer from "./pages/AIComposer";
-import { Layout } from "lucide-react";
 import Accounts from "./pages/Accounts";
+import Scheduler from "./pages/Scheduler";
+import Layout from "./components/Layout";
 
 export default function App() {
     return (
